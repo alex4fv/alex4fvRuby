@@ -1,0 +1,53 @@
+tok_test_12234_6dafda0E7e5378bDD40bfcf7809254FA
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: apprider
+  username: alex
+  password: jovenes
+  host: localhost
+  pool: 5
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: apprider
+  username: alex
+  password: jovenes
+  host: localhost
+  pool: 5
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: apprider
+  username: alex
+  password: jovenes
+  host: localhost
+  pool: 5	
+
+
+
+#development:
+#  adapter: postgresql
+#  database: development
+#  username: alex
+#  password: jovenes
+#  host: localhost
+
+#development:
+#  host: localhost
+#  adapter: postgresql
+#  encoding: unicode
+#  database: apprider
+#  pool: 2
+#  username: app_rider
+#  password: app.rider.2024
+
+#development:
+#	adapter: postgresql
+#	database: development
+#	username: <%=ENV['GP_USER'] %>
+#	password: <%=ENV['GP_PASS'] %>
+#	host: localhost

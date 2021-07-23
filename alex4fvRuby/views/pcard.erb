@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title><%= @title %></title>
+    
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+<body>
+
+    <div class="heading form_center">
+        <h1>Agrege una Trajeta de Pago</h1>
+  
+    <div class="form-control form_center">
+        <form action="pcardtoken" method="post">
+        
+            <div class="form-group owner">
+                <label for="Nombre en la tarjeta (Owner)">Owner</label>
+                <input type="text" class="form-control" name="owner" riquired>
+            </div>
+            
+            <div class="form-group" id="card-number-field">
+                <label for="cardNumber">Card Number</label>
+                <input type="number" min="16" max="6000000000000000" class="form-control" name="cardnum" riquired>
+            </div>
+            <div class="form-group CVV">
+                <label for="cvv">CVV</label>
+                <input type="number" max="999"class="form-control" name="cvc" riquired>
+            </div>
+            <div class="select-css" >
+                <label>Expiration Date</label>
+                <select class="select-css" name="month">
+                    <option value="01">January</option>
+                    <option value="02">February </option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                
+                <select class="select-css" name="year">
+                    <option value="16"> 2021</option>
+                    <option value="17"> 2022</option>
+                    <option value="18"> 2023</option>
+                    <option value="19"> 2024</option>
+                    <option value="20"> 2025</option>
+                    <option value="21"> 2026</option>
+                </select>
+            </div>
+            <div class="form-group" id="credit_cards">
+                <img src="assets/images/visa.jpg" id="visa">
+                <img src="assets/images/mastercard.jpg" id="mastercard">
+                <img src="assets/images/amex.jpg" id="amex">
+            </div>
+            <div class="form-group" id="pay-now">
+            <input type="submit" value="Guardar" class="btn btn-default"/>
+               
+            </div>
+        </form>
+    </div>
+    
+</div>
+</body></html>

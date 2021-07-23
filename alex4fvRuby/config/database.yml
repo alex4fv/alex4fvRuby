@@ -1,0 +1,18 @@
+#postgresql_settings: &postgresql_settings
+development:
+  adapter: postgresql
+  database: app_myruby
+  username: adminruby
+  password: Ruby.2024
+  
+
+
+	
+	
+
+#CREATE TABLE appuser(
+#id serial PRIMARY KEY,
+#name VARCHAR ( 50 ) UNIQUE NOT NULL,
+#email VARCHAR ( 255 ) UNIQUE NOT NULL,	
+#tokencard VARCHAR ( 255 ) NOT NULL, 
+#);

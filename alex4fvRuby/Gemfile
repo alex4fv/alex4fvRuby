@@ -1,0 +1,9 @@
+# Gemfile
+source "https://rubygems.org"
+# New gems
+gem "sinatra"
+gem "pg"    # for Postgres
+gem "rake"  # so we can run Rake tasks
+gem "sinatra-activerecord"    # for Active Record models
+gem "activerecord"
+gem "rest-client" #for JSON rest to wompi

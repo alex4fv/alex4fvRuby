@@ -1,0 +1,72 @@
+
+Install *******************************
+
+Verify that your server has installed ruby ​​version 3.0 or higher, the gems that are in the Gemfil file, php 7, Postgres 11.
+
+PHP server
+PHP_curl
+PHP_psql
+
+***********************
+
+In the folder V1 there are two files that are placed in the root folder of the server, if it is a local or remote server, the url that is in the "pcard.rb" file must be changed.
+
+postgres 11
+If you wish, you can create the databases with the lines that you will find here and it will help to have the permissions for the new user, change the corresponding data in the environments.rb file
+
+
+#configure :development do
+#	db = URI.parse(ENV['DATABASE_URL'] || 'postgres://adminruby:Ruby.2024@localhost:5432/app_myruby')
+
+#	ActiveRecord::Base.establish_connection(
+#			:adapter => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
+#			:host     => db.host,
+#			:username => db.user,
+#			:password => db.password,
+#			:database => db.path[1..-1],
+#			:encoding => 'utf8'
+#)
+#end
+
+
+
+#Postgresql
+#CREATE USER adminruby PASSWORD 'Ruby.2024';
+#CREATE DATABASE app_myruby WITH OWNER adminruby;
+#GRANT ALL PRIVILEGES ON DATABASE app_myruby TO adminruby;
+
+#CREATE TABLE accounts (
+#	id serial PRIMARY KEY,
+#	name VARCHAR ( 50 ) NOT NULL,
+#	fname VARCHAR ( 50 ) NOT NULL,
+#	email VARCHAR ( 150 ) UNIQUE NOT NULL,
+#	password VARCHAR ( 50 ) NOT NULL,
+#	phone VARCHAR ( 255 ) NOT NULL,
+#	address VARCHAR ( 255 ) NOT NULL 
+#);
+#ALTER TABLE accounts RENAME TO appusers;
+#ALTER TABLE appuseres ALTER COLUMN fname SET DEFAULT
+
+
+#INSERT INTO appusers (name, fname, email, password, phone, adress) VALUES ('Yohana', 'F.', 'yobas1976@hotmail.com', '123456', '3111111111', 'AV siempre Viva 123');
+
+#GRANT ALL PRIVILEGES ON DATABASE app_myruby to adminruby;
+#ALTER DATABASE app_myruby OWNER TO adminruby;
+
+#PG::InsufficientPrivilege: ERROR:
+#ALTER ROLE adminruby SUPERUSER;
+
+#CREATE TABLE pcard (
+#	id serial PRIMARY KEY,
+#	id_user integer NOT NULL,
+#	tok VARCHAR ( 60 ) NOT NULL,
+#	created_at VARCHAR ( 50 ) NOT NULL,
+#	brand VARCHAR ( 10 ) NOT NULL,	
+#	name VARCHAR ( 20 ) NOT NULL,
+#	last_four VARCHAR ( 4 ) NOT NULL,
+#	bin VARCHAR ( 6 ) NOT NULL,
+#	exp_year VARCHAR ( 2 ) NOT NULL,
+#	exp_month VARCHAR ( 2 ) NOT NULL,
+#	card_holder VARCHAR ( 20 ) NOT NULL,
+#	expires_at VARCHAR ( 30 ) NOT NULL 
+#);

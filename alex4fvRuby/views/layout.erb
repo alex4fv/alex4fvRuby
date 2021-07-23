@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title><%= @title %></title>
+    <script type="text/javascript" src="https://checkout.wompi.co/widget.js"></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div > <a href="/">Inicio</a>  <%= @menu %> | <a href="viaje">Viaje</a> | </div>
+
+    <div class="pure-u-md-3-5">
+        <section class="content">
+
+<%= yield %>
+
+        </section>
+    </div>
+</div>
+
+</body>
+</html>
